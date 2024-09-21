@@ -1,6 +1,11 @@
 import React from "react";
 import { Spotlight } from "./ui/spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import RoundIcon from "./ui/RoundIcon";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import BoxIcon from "./ui/BoxIcon";
+import { SiChessdotcom, SiLeetcode } from "react-icons/si";
+import { IoMdMail } from "react-icons/io";
 
 const Primary = () => {
   return (
@@ -25,16 +30,32 @@ const Primary = () => {
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             Dynamic Web magic with Next.js
           </h2>
-
           <TextGenerateEffect
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Transforming Concepts into Seamless Experiences"
+            words="Transforming Concepts into Seamless User Experiences"
           />
-
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi, I&apos;m Sayam, a student at Missouri University of Science and
             Technology and an aspiring software developer
           </p>
+
+          <div className="flex space-x-2">
+            <a href="https://github.com/XDTerminated">
+              <RoundIcon position="center" icon={<FaGithub />} />
+            </a>
+            <a href="https://www.linkedin.com/in/sayam-gupta-a4a8011b3/">
+              <BoxIcon position="center" icon={<FaLinkedin />} />
+            </a>
+            <a href="https://www.linkedin.com/in/sayam-gupta-a4a8011b3/">
+              <RoundIcon position="center" icon={<SiLeetcode />} />
+            </a>
+            <a href="https://www.chess.com/member/xd_terminated">
+              <RoundIcon position="center" icon={<SiChessdotcom />} />
+            </a>
+            <a href="mailto:gupta.sayam2006@gmail.com">
+              <BoxIcon position="center" icon={<IoMdMail />} />
+            </a>
+          </div>
         </div>
       </div>
     </div>
