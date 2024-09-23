@@ -37,19 +37,28 @@ const Primary = () => {
           </p>
 
           <div className="flex space-x-2">
-            <a href="https://github.com/XDTerminated">
+            <a href="https://github.com/XDTerminated" target="_blank">
               <RoundIcon position="center" icon={<FaGithub />} />
             </a>
-            <a href="https://www.linkedin.com/in/sayam-gupta-a4a8011b3/">
+            <a
+              href="https://www.linkedin.com/in/sayam-gupta-a4a8011b3/"
+              target="_blank"
+            >
               <BoxIcon position="center" icon={<FaLinkedin />} />
             </a>
-            <a href="https://www.linkedin.com/in/sayam-gupta-a4a8011b3/">
+            <a
+              href="https://www.linkedin.com/in/sayam-gupta-a4a8011b3/"
+              target="_blank"
+            >
               <RoundIcon position="center" icon={<SiLeetcode />} />
             </a>
-            <a href="https://www.chess.com/member/xd_terminated">
+            <a
+              href="https://www.chess.com/member/xd_terminated"
+              target="_blank"
+            >
               <RoundIcon position="center" icon={<SiChessdotcom />} />
             </a>
-            <a href="mailto:gupta.sayam2006@gmail.com">
+            <a href="mailto:gupta.sayam2006@gmail.com" target="_blank">
               <BoxIcon position="center" icon={<IoMdMail />} />
             </a>
           </div>
