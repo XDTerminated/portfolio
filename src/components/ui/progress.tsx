@@ -1,14 +1,15 @@
 "use client";
 
 import * as React from "react";
-import * as LabelPrimitive from "@radix-ui/react-label";
-import { cva, type VariantProps } from "class-variance-authority";
+import * as ProgressPrimitive from "@radix-ui/react-progress";
 
 import { cn } from "@/lib/utils";
 
-const labelVariants = cva("text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70");
+const Progress = React.forwardRef<React.ElementRef<typeof ProgressPrimitive.Root>, React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>>(({ className, value, ...props }, ref) => (
+    <ProgressPrimitive.Root ref={ref} className={cn("relative h-[0.3rem] w-full overflow-hidden rounded-full bg-zinc-300 dark:bg-zinc-500", className)} {...props}>
+        <ProgressPrimitive.Indicator className="h-full w-full flex-1 bg-primary transition-all" style={{ transform: `translateX(-${100 - (value || 0)}%)` }} />
+    </ProgressPrimitive.Root>
+));
+Progress.displayName = ProgressPrimitive.Root.displayName;
 
-const Label = React.forwardRef<React.ElementRef<typeof LabelPrimitive.Root>, React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & VariantProps<typeof labelVariants>>(({ className, ...props }, ref) => <LabelPrimitive.Root ref={ref} className={cn(labelVariants(), className)} {...props} />);
-Label.displayName = LabelPrimitive.Root.displayName;
-
-export { Label };
+export { Progress };
