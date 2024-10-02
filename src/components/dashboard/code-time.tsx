@@ -1,5 +1,6 @@
-import { Languages } from "@/types";
+// src/components/dashboard/code-time.tsx
 
+import { Languages } from "@/types";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface CodeTimeProps {
@@ -9,6 +10,8 @@ interface CodeTimeProps {
 }
 
 export function CodeTime({ started, totalTime, languages }: CodeTimeProps) {
+    console.log(languages);
+    console.log("Hello");
     return (
         <div className="grid w-full grid-cols-1 gap-2 md:grid-cols-2">
             <Card>
@@ -25,8 +28,14 @@ export function CodeTime({ started, totalTime, languages }: CodeTimeProps) {
                     <CardTitle className="text-sm font-medium">Most used language</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <div className="text-lg font-bold">{languages[0].name}</div>
-                    <p className="text-xs text-muted-foreground">{languages[0].text}</p>
+                    {languages && languages.length > 0 ? (
+                        <>
+                            <div className="text-lg font-bold">{languages[0].name}</div>
+                            <p className="text-xs text-muted-foreground">{languages[0].text}</p>
+                        </>
+                    ) : (
+                        <div className="text-lg font-bold">N/A</div>
+                    )}
                 </CardContent>
             </Card>
         </div>
