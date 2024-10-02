@@ -3,11 +3,11 @@ import { SiteConfig } from "@/types";
 import { env } from "@/env.mjs";
 
 export const siteConfig: SiteConfig = {
-    name: "rdev",
+    name: "XDTerminated",
     author: "redpangilinan",
     description: "My personal website built in Nextjs.",
     url: env.NEXT_PUBLIC_APP_URL,
-    ogImage: `${env.NEXT_PUBLIC_APP_URL}/og.jpg`,
+    ogImage: `${env.NEXT_PUBLIC_APP_URL}/og.png`,
     links: {
         github: "https://github.com/XDTerminated",
         facebook: "https://facebook.com/redpangilinan15",
