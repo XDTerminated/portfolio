@@ -10,8 +10,6 @@ interface CodeTimeProps {
 }
 
 export function CodeTime({ started, totalTime, languages }: CodeTimeProps) {
-    console.log(languages);
-    console.log("Hello");
     return (
         <div className="grid w-full grid-cols-1 gap-2 md:grid-cols-2">
             <Card>

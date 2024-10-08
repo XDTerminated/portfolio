@@ -12,6 +12,7 @@ interface LanguagesProps {
 
 export function Languages({ languages }: LanguagesProps) {
     const data = languages.slice(0, 10);
+    console.log(data);
 
     return (
         <Card className="w-full">
