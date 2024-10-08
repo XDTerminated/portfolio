@@ -21,7 +21,7 @@ export function Languages({ languages }: LanguagesProps) {
             <CardContent className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-0">
                 <ResponsiveContainer width="100%" height={250}>
                     <PieChart>
-                        <Pie data={data} cx="50%" cy="50%" innerRadius={50} outerRadius={100} paddingAngle={3} strokeWidth={0} dataKey="hours">
+                        <Pie data={data} cx="50%" cy="50%" innerRadius={50} outerRadius={100} paddingAngle={0} strokeWidth={0} dataKey="hours">
                             {data.map((entry, index) => (
                                 <Cell key={`cell-${index}`} fill={languageColors[entry.name] || "#1f9aef"} />
                             ))}
